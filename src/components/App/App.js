@@ -1,9 +1,15 @@
-import './App.css';
+import { Routes, Route, useLocation} from 'react-router-dom'
+import SignUp from '../SignUp/SignUp'
 
 function App() {
   return (
     <div className="App">
-      test
+      <Routes>
+        <Route
+          path="/signup"
+          element={<SignUp/>}
+        />
+      </Routes>
     </div>
   );
 }
