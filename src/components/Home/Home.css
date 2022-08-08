@@ -49,6 +49,13 @@
     margin: 15px;
 }
 
+.welcome-message {
+    text-align: center;
+    margin: 5px;
+    color: #47AD96;
+    font-weight: 700;
+}
+
 .field {
     margin: 5px 0px;
     padding: 10px;
@@ -77,6 +84,10 @@
 
 .sign-button:hover {
     background: #3a9c85;
+}
+
+.error-message {
+    margin: 10px 20px;
 }
 
 .switch {
