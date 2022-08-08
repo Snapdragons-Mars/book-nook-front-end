@@ -41,7 +41,13 @@ function Home() {
                 })
                 .catch(err => {
                     console.log(err)
-                    if (err.response.data.includes("User validation failed")) {
+                    if (err.response.data.includes("User validation failed: username: Path `username` is required")) {
+                        setError("Enter username.")
+                    }
+                    else if (err.response.data.includes("User validation failed: email: Path `email` is required.")) {
+                        setError("Enter email.")
+                    }
+                    else if (err.response.data.includes("User validation failed: email: Invalid email")) {
                         setError("Invalid email.")
                     }
                     else {
@@ -53,8 +59,10 @@ function Home() {
             axios.post(`http://localhost:8000/api/users/signin`, userSignIn)
                 .then(res => {
                     console.log(res)
+                    // save token to local storage
+                    window.localStorage.setItem("Token", res.data.token)
+                    navigate('/search')
                 })
-            // navigate('/browse')
         }
     }
 
