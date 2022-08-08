@@ -71,7 +71,12 @@
     font-family: 'Alegreya Sans', sans-serif;
     font-weight: 600;
     border: none;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
+    cursor: pointer;
+}
+
+.sign-button:hover {
+    background: #3a9c85;
 }
 
 .switch {
@@ -82,6 +87,7 @@
     color: #47AD96;
     text-decoration: underline;
     font-weight: 700;
+    cursor: pointer;
 }
 
 .or {
@@ -124,6 +130,7 @@
 .sm-logo {
     width: 60px;
     margin: 5px;
+    cursor: pointer;
 }
 
 .book-nook-logo-div {
