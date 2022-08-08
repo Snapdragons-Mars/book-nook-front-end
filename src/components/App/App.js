@@ -1,9 +1,14 @@
+import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router';
-//import SignIn
-//import SignUp
-//import BrowsePage
-//import ResultsPage
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import reportWebVitals from './reportWebVitals';
+import SignIn from './SignIn/SignIn';
+import SignUp from './SignUp/SignUp';
+import BrowsePage from './BrowsePage/BrowsePage';
+import ResultsPage from './ResultsPage/ResultsPage';
+import WriteReview from './WriteReview/WriteReview';
+import UserPage from './UserPage/UserPage';
+import ReadReviewPage from './ReadReviewPage/ReadReviewPage';
 
 function App() {
   return (
@@ -27,6 +32,18 @@ function App() {
           <ResultsPage />
         </Route>
 
+        <Route path="/createreview">
+          <WriteReview />
+        </Route>
+
+        <Route path="/myreviews">
+          <UserPage />
+        </Route>
+
+        <Route path="/review/:id">
+          <ReadReviewPage />
+        </Route>
+
       </Switch>
     </div>
     </Router>
@@ -34,3 +51,5 @@ function App() {
 }
 
 export default App;
+
+reportWebVitals();
