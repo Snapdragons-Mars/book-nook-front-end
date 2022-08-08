@@ -1,14 +1,13 @@
-import { Routes, Route, useLocation} from 'react-router-dom'
-import SignUp from '../SignUp/SignUp'
+import { Routes, Route, Navigate } from 'react-router-dom'
+import Home from '../Home/Home'
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route
-          path="/signup"
-          element={<SignUp/>}
-        />
+        {/* Redirect to sign up page upon start */}
+        <Route path="/" element={<Navigate to="/home"/>}/>
+        <Route path="/home" element={<Home/>}/>
       </Routes>
     </div>
   );
