@@ -40,7 +40,7 @@ function Home() {
                     setError(null)
                 })
                 .catch(err => {
-                    console.log(err)
+                    // console.log(err)
                     if (err.response.data.includes("User validation failed: username: Path `username` is required")) {
                         setError("Enter username.")
                     }
@@ -58,7 +58,7 @@ function Home() {
         else {
             axios.post(`http://localhost:8000/api/users/signin`, userSignIn)
                 .then(res => {
-                    console.log(res)
+                    // console.log(res)
                     // save token to local storage
                     window.localStorage.setItem("Token", res.data.token)
                     navigate('/search')
