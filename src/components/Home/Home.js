@@ -63,6 +63,9 @@ function Home() {
                     window.localStorage.setItem("Token", res.data.token)
                     navigate('/search')
                 })
+                .catch(err => {
+                    setError("Provided email or password is incorrect.")
+                })
         }
     }
 
