@@ -12,15 +12,15 @@ function Home() {
     const [signUp, setSignUp] = useState(true)
     const [welcomeUser, setWelcomeUser] = useState(false)
     const [userSignUp, setUserSignUp] = useState({
-        name: '',
+        username: '',
         email: '',
         password: ''
     })
     const [userSignIn, setUserSignIn] = useState({
-        name: '',
         email: '',
         password: ''
     })
+    const [error, setError] = useState(null)
 
     function handleSignUpChange(event) {
         setUserSignUp({...userSignUp, [event.target.id]: event.target.value})
@@ -36,7 +36,17 @@ function Home() {
             axios.post(`http://localhost:8000/api/users/signup`, userSignUp)
                 .then(res => {
                     setSignUp(!signUp)
-                    setWelcomeUser(!welcomeUser)
+                    setWelcomeUser(true)
+                    setError(null)
+                })
+                .catch(err => {
+                    console.log(err)
+                    if (err.response.data.includes("User validation failed")) {
+                        setError("Invalid email.")
+                    }
+                    else {
+                        setError(err.response.data)
+                    }
                 })
         }
         else {
@@ -50,6 +60,16 @@ function Home() {
 
     function handleSwitch() {
         setSignUp(!signUp)
+        setWelcomeUser(false)
+        setUserSignUp({
+            username: '',
+            email: '',
+            password: ''
+        })
+        setUserSignIn({
+            email: '',
+            password: '' 
+        })
     }
 
     return (
@@ -61,14 +81,15 @@ function Home() {
                 <form className="sign-form" type="submit" onSubmit={handleSubmit}>
                     <div className="input-fields">
                         {signUp ? (<h3 className="sign-title">Sign Up</h3>) : (<h3 className="sign-title">Sign In</h3>)}
+                        {welcomeUser ? (<p className="welcome-message">Welcome to Book Nook!</p>) : null}
                         {signUp ? 
                             (<input 
                                 onChange={handleSignUpChange}
                                 className="field"
-                                id='name'
+                                id='username'
                                 type="text"
                                 placeholder="Username"
-                                value={userSignUp.name}
+                                value={userSignUp.username}
                             />) 
                             : null
                         }
@@ -111,6 +132,7 @@ function Home() {
                             />)
                         }
                     </div>
+                    {error && <p className="error-message">{error}</p>}
                     {signUp ? (<button type="submit" className="sign-button">Create Account</button>) : (<button type="submit" className="sign-button">Log In</button>)}
                 </form>
                 {signUp ? (<p className="switch">Already have an account? <span className="switch-link" onClick={handleSwitch}>Sign In</span></p>) : (<p className="switch">Need an account? <span className="switch-link" onClick={handleSwitch}>Sign Up</span></p>)}

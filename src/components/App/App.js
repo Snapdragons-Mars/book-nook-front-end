@@ -13,7 +13,7 @@ function App() {
         {/* Redirect to sign up page upon start */}
         <Route path="/" element={<Navigate to="/home"/>}/>
         <Route path="/home" element={<Home/>}/>
-        <Route path = "/search" element={<BrowsePage/>}/>
+        <Route path ="/search" element={<BrowsePage/>}/>
         {/* <Route path="/searchresults" element={<ResultsPage/>}/>
         <Route path="/createreview" element={ <WriteReview />}/>
         <Route path="/myreviews" element={<UserPage />}/>
