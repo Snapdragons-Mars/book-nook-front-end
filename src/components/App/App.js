@@ -4,9 +4,10 @@ import BrowsePage from '../BrowsePage/BrowsePage';
 // import ResultsPage from '../ResultsPage/ResultsPage';
 // import WriteReview from '../WriteReview/WriteReview';
 // import UserPage from '../UserPage/UserPage';
-// import ReadReviewPage from '../ReadReviewPage/ReadReviewPage';
+import ReadReviewPage from '../ReadReviewPage/ReadReviewPage';
 
 function App() {
+
   return (
     <div className="App">
       <Routes>
@@ -16,8 +17,8 @@ function App() {
         <Route path ="/search" element={<BrowsePage/>}/>
         {/* <Route path="/searchresults" element={<ResultsPage/>}/>
         <Route path="/createreview" element={ <WriteReview />}/>
-        <Route path="/myreviews" element={<UserPage />}/>
-        <Route path="/review/:id" element={<ReadReviewPage />}/> */}
+        <Route path="/myreviews" element={<UserPage />}/> */}
+        <Route path="/review/:id" element={<ReadReviewPage />}/>
       </Routes>
     </div>
   );
