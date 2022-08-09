@@ -128,21 +128,24 @@
     margin-left: 5px;
 }
 
-.continue {
-    text-align: center;
-}
-
-.platforms {
+.google-div {
     display: flex;
     justify-content: center;
-    margin: 15px;
+    background: white;
+    border: solid 1px black;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
 }
 
-.sm-logo {
-    width: 60px;
-    margin: 5px;
-    cursor: pointer;
+.google-logo {
+    width: 25px;
 }
+
+.google-text {
+    margin: 10px;
+}
+
 
 .book-nook-logo-div {
     display: flex;

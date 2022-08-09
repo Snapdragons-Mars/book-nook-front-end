@@ -1,11 +1,9 @@
 import './Home.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
-import apple from '../../assets/apple-icon.svg';
-import google from '../../assets/google-icon.svg';
-import facebook from '../../assets/facebook-icon.svg'
 import logo from '../../assets/book-nook-icon.svg'
+import google from '../../assets/google-icon.svg'
 
 function Home() {
     const navigate = useNavigate()
@@ -153,12 +151,10 @@ function Home() {
                         <p className="or-text">OR</p>
                         <div className="divider divider-right"></div>
                     </div>
-                    <p className="continue">Continue with other platforms</p>
-                    <div className="platforms">
-                        <img className="sm-logo" src={apple} alt="Apple Logo"/>
-                        <img className="sm-logo" src={google} alt="Google Logo"/>
-                        <img className="sm-logo" src={facebook} alt="Facebook Logo"/>
-                    </div>
+                <div className="google-div">
+                    <img className="google-logo" src={google} alt="Google Logo"/>
+                    <p className="google-text">Sign in with Google</p>
+                </div>
                 </div>
             </div>
             <div className="book-nook-logo-div">
