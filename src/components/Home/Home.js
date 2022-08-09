@@ -1,9 +1,8 @@
 import './Home.css'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import logo from '../../assets/book-nook-icon.svg'
-import google from '../../assets/google-icon.svg'
 
 function Home() {
     const navigate = useNavigate()
@@ -145,17 +144,6 @@ function Home() {
                     {signUp ? (<button type="submit" className="sign-button">Create Account</button>) : (<button type="submit" className="sign-button">Log In</button>)}
                 </form>
                 {signUp ? (<p className="switch">Already have an account? <span className="switch-link" onClick={handleSwitch}>Sign In</span></p>) : (<p className="switch">Need an account? <span className="switch-link" onClick={handleSwitch}>Sign Up</span></p>)}
-                <div className="other-platform">
-                    <div className="or">
-                        <div className="divider divider-left"></div>
-                        <p className="or-text">OR</p>
-                        <div className="divider divider-right"></div>
-                    </div>
-                <div className="google-div">
-                    <img className="google-logo" src={google} alt="Google Logo"/>
-                    <p className="google-text">Sign in with Google</p>
-                </div>
-                </div>
             </div>
             <div className="book-nook-logo-div">
                 <img className="book-nook-logo" src={logo} alt="Book Nook Logo"/>
