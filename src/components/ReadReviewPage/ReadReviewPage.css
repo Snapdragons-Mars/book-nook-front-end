@@ -1,0 +1,153 @@
+.read-review-page {
+    background: #763E15;
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.back-button {
+    width: 80px;
+    height: 30px;
+    background: #34a853;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 700;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background: #3a9c85;
+}
+
+.profile-btn {
+    width: 50px;
+    cursor: pointer;
+}
+
+.write-btn-container {
+    margin: 40px 40px 10px 40px;
+}
+
+.write-btn {
+    width: 180px;
+    height: 35px;
+    background: #E15C45;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 22px;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: 800;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    cursor: pointer;
+}
+
+.write-btn:hover {
+    background: #ca4d37;
+}
+
+.study-spot-info {
+    display: flex;
+    align-items: center;
+    margin: 10px 40px;
+    background: #FDF7E9;
+    justify-content: space-between;
+    padding: 0px 10px;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.study-spot-icon-name {
+    display: flex;
+}
+
+.study-spot-icon {
+    width: 35px;
+}
+
+.study-spot-name {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: 800; 
+    color: #34a853;
+}
+
+.study-spot-star-rating {
+    display: flex;
+}
+
+.star {
+    width: 27px;
+    margin: 0 10px;
+}
+
+.rating {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: 800; 
+}
+
+.review-card {
+    background: #FDF7E9;
+    display: flex;
+    margin: 0 40px 10px 40px;
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.left-side {
+    margin: 10px;
+}
+
+.review-title {
+    margin: 10px 0;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: 800;
+    color: #34a853;
+    font-size: 25px;
+}
+
+.review-paragraph {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 500;
+}
+
+.divider-div {
+    display: flex;
+    align-items: center;
+}
+
+.divider {
+    border-left: 2px solid black;
+    height: 175px;
+}
+
+.right-side {
+    margin: 10px;
+}
+
+.rating-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon {
+    width: 27px;
+    margin: 0 10px;
+}
+
+.rating-div {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: 800; 
+    display: flex;
+    justify-content: start;
+}
