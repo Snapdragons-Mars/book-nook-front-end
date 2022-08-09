@@ -101,49 +101,6 @@
     cursor: pointer;
 }
 
-.or {
-    display: flex;
-    align-items: center;
-    font-family: 'Alegreya Sans SC', sans-serif;
-    font-weight: 700;
-}
-
-.or-text {
-    margin: 5px;
-}
-
-.divider {
-    flex: 1;
-    height: 2px;
-    background: black;
-}
-
-.divider-left {
-    margin-left: 20px;
-    margin-right: 5px;
-}
-
-.divider-right {
-    margin-right: 20px;
-    margin-left: 5px;
-}
-
-.continue {
-    text-align: center;
-}
-
-.platforms {
-    display: flex;
-    justify-content: center;
-    margin: 15px;
-}
-
-.sm-logo {
-    width: 60px;
-    margin: 5px;
-    cursor: pointer;
-}
-
 .book-nook-logo-div {
     display: flex;
     justify-content: center;

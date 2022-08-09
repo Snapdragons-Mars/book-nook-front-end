@@ -2,9 +2,6 @@ import './Home.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
-import apple from '../../assets/apple-icon.svg';
-import google from '../../assets/google-icon.svg';
-import facebook from '../../assets/facebook-icon.svg'
 import logo from '../../assets/book-nook-icon.svg'
 
 function Home() {
@@ -147,19 +144,6 @@ function Home() {
                     {signUp ? (<button type="submit" className="sign-button">Create Account</button>) : (<button type="submit" className="sign-button">Log In</button>)}
                 </form>
                 {signUp ? (<p className="switch">Already have an account? <span className="switch-link" onClick={handleSwitch}>Sign In</span></p>) : (<p className="switch">Need an account? <span className="switch-link" onClick={handleSwitch}>Sign Up</span></p>)}
-                <div className="other-platform">
-                    <div className="or">
-                        <div className="divider divider-left"></div>
-                        <p className="or-text">OR</p>
-                        <div className="divider divider-right"></div>
-                    </div>
-                    <p className="continue">Continue with other platforms</p>
-                    <div className="platforms">
-                        <img className="sm-logo" src={apple} alt="Apple Logo"/>
-                        <img className="sm-logo" src={google} alt="Google Logo"/>
-                        <img className="sm-logo" src={facebook} alt="Facebook Logo"/>
-                    </div>
-                </div>
             </div>
             <div className="book-nook-logo-div">
                 <img className="book-nook-logo" src={logo} alt="Book Nook Logo"/>
