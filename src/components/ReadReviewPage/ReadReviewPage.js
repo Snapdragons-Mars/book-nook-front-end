@@ -19,7 +19,7 @@ function ReadReviewPage() {
         <div className="read-review-page">
             <div className="heading">
                 <button onClick={handleBack} className="back-button">Back</button>
-                <Link to="/myreviews">
+                <Link to="/profile">
                     <img className="profile-btn" src={profile} alt="profile"/>
                 </Link>
             </div>

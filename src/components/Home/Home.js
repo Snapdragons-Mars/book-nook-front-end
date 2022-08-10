@@ -58,7 +58,7 @@ function Home() {
                     // console.log(res)
                     // save token to local storage
                     window.localStorage.setItem("Token", res.data.token)
-                    navigate('/search')
+                    navigate('/review')
                 })
                 .catch(err => {
                     setError("Provided email or password is incorrect.")
