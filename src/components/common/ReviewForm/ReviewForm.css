@@ -1,0 +1,93 @@
+.review-page {
+    background: #763E15;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-container {
+    background: #FDF7E9;
+    margin: 0 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.input-fields {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+#rating-button {
+    width: 20px;
+    display: block;
+}
+
+.welcome-message {
+    text-align: center;
+    margin: 5px;
+    color: #47AD96;
+    font-weight: 700;
+}
+
+.field {
+    margin: 5px 0px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.field::placeholder {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.sign-button {
+    background: #47AD96;
+    margin: 10px 20px;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 600;
+    border: none;
+    box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
+    cursor: pointer;
+}
+
+.sign-button:hover {
+    background: #3a9c85;
+}
+
+.error-message {
+    margin: 10px 20px;
+}
+
+.switch {
+    text-align: center;
+}
+
+.switch-link {
+    color: #47AD96;
+    text-decoration: underline;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.book-nook-logo-div {
+    display: flex;
+    justify-content: center;
+}
+
+.book-nook-logo {
+    width: 100px;
+}
