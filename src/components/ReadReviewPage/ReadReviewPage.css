@@ -16,7 +16,7 @@
     align-items: center;
 }
 
-.book-nook-logo {
+.book-nook-logo-2 {
     width: 55px;
 }
 
@@ -126,6 +126,11 @@
     font-size: 16px;
 }
 
+.divider {
+    border: 1px solid black;
+    margin: 10px 20px;
+}
+
 .icon {
     width: 27px;
     margin: 0 5px;
@@ -175,6 +180,6 @@
 
 .date {
     font-family: 'Alegreya Sans SC', sans-serif;
-    font-weight: 500;
+    font-weight: 300;
     margin: 10px;
 }

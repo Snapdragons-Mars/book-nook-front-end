@@ -24,7 +24,7 @@ function ReadReviewPage() {
                 // console.log(loggedOnUserId)
                 axios.get(`http://localhost:8000/api/reviews/user/${loggedOnUserId}`)
                     .then(res => {
-                        console.log(res.data)
+                        // console.log(res.data)
                         setReviews(res.data)
                     })
             })
@@ -34,7 +34,7 @@ function ReadReviewPage() {
         <div className="read-review-page">
             <div className="heading">
                 <div className="logo-icon-name">
-                    <img className="book-nook-logo" src={logo} alt="book nook logo"/>
+                    <img className="book-nook-logo-2" src={logo} alt="book nook logo"/>
                     <p className="book-nook-name">Book Nook</p>
                 </div>
                 <Link to="/profile">
@@ -78,6 +78,8 @@ function ReadReviewPage() {
                                 {review.comment}
                             </p>
                         </div>
+
+                        <hr className="divider"></hr>
                             
                         <div className="bottom">
                             <div className="rating-div">
@@ -97,7 +99,6 @@ function ReadReviewPage() {
                                 <p className="rating-number">{review.wifi_rating}</p>
                             </div>
                         </div>
-
                         <div className="date-div">
                             <p className="date">{review.updatedAt.slice(5,10)}-{review.updatedAt.slice(0,4)}</p>
                         </div>
