@@ -30,7 +30,7 @@ function Home() {
     function handleSubmit(event) {
         event.preventDefault()
         if (signUp) {
-            axios.post(`http://localhost:8000/api/users/signup`, userSignUp)
+            axios.post(`http://localhost:8005/api/users/signup`, userSignUp)
                 .then(res => {
                     setSignUp(!signUp)
                     setWelcomeUser(true)
@@ -53,12 +53,12 @@ function Home() {
                 })
         }
         else {
-            axios.post(`http://localhost:8000/api/users/signin`, userSignIn)
+            axios.post(`http://localhost:8005/api/users/signin`, userSignIn)
                 .then(res => {
                     // console.log(res)
                     // save token to local storage
                     window.localStorage.setItem("Token", res.data.token)
-                    navigate('/review')
+                    navigate('/reviews')
                 })
                 .catch(err => {
                     setError("Provided email or password is incorrect.")
