@@ -1,53 +1,7 @@
-// import React, { useEffect, useState } from 'react';
-// import axios from 'axios';
-
-// const ReviewList = () => {
-// 	const [reviews, setReviews] = useState([]);
-// 	const [loading, setLoading] = useState(true);
-
-// 	useEffect(() => {
-// 		const handleLoadingTimeOut = setTimeout(() => {
-// 			if (!reviews.length) {
-// 				setLoading(false);
-// 			}
-// 		}, 5000);
-		
-// 		// Write your GET fetch() or axios() request here
-// 		axios.get('http://localhost:8000/user/')
-// 			.then(res => {
-// 				setReviews(res.data)
-// 				setLoading(false);
-// 			})
-
-// 		return () => clearTimeout(handleLoadingTimeOut);
-// 	}, []);
-
-// 	if (loading && !reviews.length) {
-// 		return <h2>Loading...</h2>;
-// 	}
-
-// 	if (!loading && !reviews.length) {
-// 		return <h2>Oops, something went wrong. Please try again later! </h2>;
-// 	}
-
-// 	return (
-// 		<ul>
-// 			{reviews.map((review) => (
-// 				<ReviewItem key={review._id} review={review} />
-// 			))}
-// 		</ul>
-// 	);
-// };
-
-// export default ReviewList;
-import React from "react"
+import './UserReview.css'
 import axios from  "axios"
 import { useNavigate, Link } from 'react-router-dom'
 import profile from '../../assets/profile-icon.svg'
-import noise from '../../assets/noise-icon.svg'
-import outlet from '../../assets/outlet-icon.svg'
-import wifi from '../../assets/wifi-icon.svg'
-import aesthetic from '../../assets/aesthetic-icon.svg'
 import coffee from '../../assets/coffee-icon.svg'
 import star from '../../assets/star-icon.svg'
 
@@ -64,6 +18,12 @@ function UserReviewPage() {
             })   
     }
 
+    function handleLogout() {
+        window.localStorage.removeItem('Token')
+        window.localStorage.removeItem('Email')
+        navigate('/home')
+    }
+
     return (
         <div className="user-review-page">
             <div className="back">
@@ -74,65 +34,65 @@ function UserReviewPage() {
             </div>
 
             <div className="header">
-                <h2> Personal Book Nooks</h2>
+                <h2> Edit or Delete Book Nooks</h2>
             </div>
 
-            <ul className="booknooks">
+            <ul className="booknooks-list">
                 <li>
                     <div className="study-spot-info">
-                    <div className="study-spot-icon-name">
-                        <img className="study-spot-icon" src={coffee} alt="coffee-icon"/>
-                        <h2 className="study-spot-name">[Starbucks]</h2>
+                        <div className="study-spot-icon-name">
+                            <img className="study-spot-icon" src={coffee} alt="coffee-icon"/>
+                            <h2 className="study-spot-name">[Starbucks]</h2>
+                        </div>
+                        <div className="study-spot-star-rating">
+                            <img className="star" src={star} alt="star-icon"/>
+                            <p className="rating">3.5</p>
+                        </div>
                     </div>
-                    <div className="study-spot-star-rating">
-                        <img className="star" src={star} alt="star-icon"/>
-                        <p className="rating">3.5</p>
+                    <div className="deleteAndEdit">
+                        <Link to= "/createreview"><button className="edit"> Edit</button></Link>
+                        <button onClick={handleDelete} className="delete"> Delete</button>
                     </div>
-                </div>
-                <div className="deleteAndEdit">
-                    <button onClick={handleDelete} className="delete"> Delete</button>
-                    <Link to= "/createreview"><button className="edit"> Edit</button></Link>
-                </div>
                 </li>
-
-
-
-                <li>
-                    <div className="study-spot-info">
-                    <div className="study-spot-icon-name">
-                        <img className="study-spot-icon" src={coffee} alt="coffee-icon"/>
-                        <h2 className="study-spot-name">[Starbucks]</h2>
-                    </div>
-                    <div className="study-spot-star-rating">
-                        <img className="star" src={star} alt="star-icon"/>
-                        <p className="rating">3.5</p>
-                    </div>
-                </div>
-                <div className="deleteAndEdit">
-                    <button className="delete"> Delete</button>
-                    <button className="edit"> Edit</button>
-                </div>
-                </li>
-
 
                 <li>
                     <div className="study-spot-info">
-                    <div className="study-spot-icon-name">
-                        <img className="study-spot-icon" src={coffee} alt="coffee-icon"/>
-                        <h2 className="study-spot-name">[Starbucks]</h2>
+                        <div className="study-spot-icon-name">
+                            <img className="study-spot-icon" src={coffee} alt="coffee-icon"/>
+                            <h2 className="study-spot-name">[Starbucks]</h2>
+                        </div>
+                        <div className="study-spot-star-rating">
+                            <img className="star" src={star} alt="star-icon"/>
+                            <p className="rating">3.5</p>
+                        </div>
                     </div>
-                    <div className="study-spot-star-rating">
-                        <img className="star" src={star} alt="star-icon"/>
-                        <p className="rating">3.5</p>
+                    <div className="deleteAndEdit">
+                        <button className="delete"> Delete</button>
+                        <button className="edit"> Edit</button>
                     </div>
-                </div>
-                <div className="deleteAndEdit">
-                    <button className="delete"> Delete</button>
-                    <button className="edit"> Edit</button>
-                </div>
                 </li>
-                </ul>
+                
+                <li>
+                    <div className="study-spot-info">
+                        <div className="study-spot-icon-name">
+                            <img className="study-spot-icon" src={coffee} alt="coffee-icon"/>
+                            <h2 className="study-spot-name">[Starbucks]</h2>
+                        </div>
+                        <div className="study-spot-star-rating">
+                            <img className="star" src={star} alt="star-icon"/>
+                            <p className="rating">3.5</p>
+                        </div>
                     </div>
+                    <div className="deleteAndEdit">
+                        <button className="delete"> Delete</button>
+                        <button className="edit"> Edit</button>
+                    </div>
+                </li>
+            </ul>
+            <div className="log-out-div">
+                <button onClick={handleLogout} className="log-out-button">Logout</button>
+            </div>
+        </div>
     );
 };
 

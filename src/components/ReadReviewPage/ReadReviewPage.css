@@ -12,22 +12,21 @@
     margin: 20px;
 }
 
-.back-button {
-    width: 80px;
-    height: 30px;
-    background: #34a853;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    font-family: 'Alegreya Sans', sans-serif;
-    font-weight: 700;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    cursor: pointer;
+.logo-icon-name {
+    display: flex;
+    align-items: center;
 }
 
-.back-button:hover {
-    background: #3a9c85;
+.book-nook-logo {
+    width: 55px;
+}
+
+.book-nook-name {
+    font-size: 25px;;
+    color: white;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: 900;
+    margin: 5px;
 }
 
 .profile-btn {
@@ -40,7 +39,7 @@
 }
 
 .write-btn {
-    width: 180px;
+    width: 260px;
     height: 35px;
     background: #E15C45;
     color: white;
