@@ -37,15 +37,8 @@ function Home() {
                     setError(null)
                 })
                 .catch(err => {
-                    // console.log(err)
-                    if (err.response.data.includes("User validation failed: username: Path `username` is required")) {
-                        setError("Enter username.")
-                    }
-                    else if (err.response.data.includes("User validation failed: email: Path `email` is required.")) {
-                        setError("Enter email.")
-                    }
-                    else if (err.response.data.includes("User validation failed: email: Invalid email")) {
-                        setError("Invalid email.")
+                    if (err.response.data.includes("User validation failed: email: Invalid email")) {
+                        setError("Please enter a valid email.")
                     }
                     else {
                         setError(err.response.data)
@@ -58,6 +51,11 @@ function Home() {
                     // console.log(res)
                     // save token to local storage
                     window.localStorage.setItem("Token", res.data.token)
+                    console.log(res.data.token)
+                    // save email to local storage
+                    window.localStorage.setItem("Email", userSignIn.email)
+                })
+                .then(() => {
                     navigate('/reviews')
                 })
                 .catch(err => {
@@ -78,6 +76,7 @@ function Home() {
             email: '',
             password: '' 
         })
+        setError(null)
     }
 
     return (
