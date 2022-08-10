@@ -1,7 +1,6 @@
 .read-review-page {
     background: #763E15;
     height: 100vh;
-    overflow-y: hidden;
     overflow-x: hidden;
 }
 
@@ -35,7 +34,9 @@
 }
 
 .write-btn-container {
-    margin: 40px 40px 10px 40px;
+    margin: 25px;
+    display: flex;
+    justify-content: center;
 }
 
 .write-btn {
@@ -59,8 +60,8 @@
 .study-spot-info {
     display: flex;
     align-items: center;
-    margin: 10px 40px;
-    background: #FDF7E9;
+    margin: 15px 10px;
+    background: #34a853;
     justify-content: space-between;
     padding: 0px 10px;
     border-radius: 10px;
@@ -78,7 +79,9 @@
 .study-spot-name {
     font-family: 'Alegreya Sans SC', sans-serif;
     font-weight: 800; 
-    color: #34a853;
+    color: white;
+    margin: 5px;
+    font-size: 22px;
 }
 
 .study-spot-star-rating {
@@ -87,61 +90,45 @@
 
 .star {
     width: 27px;
-    margin: 0 10px;
+    margin: 0 5px;
 }
 
 .rating {
     font-family: 'Alegreya Sans SC', sans-serif;
     font-weight: 800; 
+    color: white;
+    font-size: 20px;
+    margin: 12px 0px;
 }
 
 .review-card {
     background: #FDF7E9;
     display: flex;
-    margin: 0 40px 10px 40px;
+    flex-direction: column;
+    align-content: center;
+    margin: 0 40px 20px 40px;
     border-radius: 20px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-.left-side {
-    margin: 10px;
-}
-
 .review-title {
-    margin: 10px 0;
+    margin: 0px 10px;
     font-family: 'Alegreya Sans SC', sans-serif;
     font-weight: 800;
-    color: #34a853;
-    font-size: 25px;
+    color: #E15C45;
+    font-size: 20px;
 }
 
 .review-paragraph {
     font-family: 'Alegreya Sans', sans-serif;
     font-weight: 500;
-}
-
-.divider-div {
-    display: flex;
-    align-items: center;
-}
-
-.divider {
-    border-left: 2px solid black;
-    height: 175px;
-}
-
-.right-side {
-    margin: 10px;
-}
-
-.rating-div {
-    display: flex;
-    justify-content: space-between;
+    margin: 5px 10px;
+    font-size: 16px;
 }
 
 .icon {
     width: 27px;
-    margin: 0 10px;
+    margin: 0 5px;
 }
 
 .rating-div {
@@ -149,4 +136,45 @@
     font-weight: 800; 
     display: flex;
     justify-content: flex-start;
+}
+
+.rating-number {
+    font-size: 20px;
+    margin: 0px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 0px 0px 0px;
+}
+
+
+.no-reviews-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.no-reviews-msg {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: 800;
+    color: white; 
+}
+
+.lofi-girl {
+    width: 200px;
+    border-radius: 50%;
+}
+
+.date-div {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0px 10px;
+}
+
+.date {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: 500;
+    margin: 10px;
 }
