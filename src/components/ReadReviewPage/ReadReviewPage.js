@@ -17,17 +17,17 @@ function ReadReviewPage() {
 
     useEffect(() => {
         axios.get(`http://localhost:8000/api/users`)
-            .then(res => {
-                const usersArr = res.data
-                const loggedOnUser = usersArr.find(user => user.email === window.localStorage.getItem('Email'))
-                const loggedOnUserId = loggedOnUser.id
-                // console.log(loggedOnUserId)
-                axios.get(`http://localhost:8000/api/reviews/user/${loggedOnUserId}`)
-                    .then(res => {
-                        // console.log(res.data)
-                        setReviews(res.data)
-                    })
-            })
+        .then(res => {
+            const usersArr = res.data
+            const loggedOnUser = usersArr.find(user => user.email === window.localStorage.getItem('Email'))
+            const loggedOnUserId = loggedOnUser.id
+            // console.log(loggedOnUserId)
+            axios.get(`http://localhost:8000/api/reviews/user/${loggedOnUserId}`)
+                .then(res => {
+                    // console.log(res.data)
+                    setReviews(res.data)
+                })
+        })
     }, [])
 
     return (
