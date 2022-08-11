@@ -9,7 +9,8 @@ Project manager: Lance Chin
 - [Book Nook](https://book-nooks.netlify.app/) 
 
 ## Component Hierarchy :jigsaw:
-(pic)
+<img width="1021" alt="Screen Shot 2022-08-10 at 10 13 08 PM" src="https://user-images.githubusercontent.com/18333562/184181207-e0d9a6dc-80b6-437b-a9da-8c60d2a902aa.png">
+
 
 ## Mobile Screenshots 📱 📸
 ![Home Page](pic)
