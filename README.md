@@ -6,24 +6,25 @@ Project authors: Madison Aberer, Davis Brown, Lance Chin, and Felipe Ventura
 Project manager: Lance Chin
 
 ## Check It Out 💡 
-- [Book Nook](https://book-nooks.netlify.app/) 
+- [Book Nook](https://book-nooks.netlify.app/)
+- [Book Nook API](https://book-nooks-api.herokuapp.com/)
 
 ## Component Hierarchy :jigsaw:
-(pic)
+![Component Hierarch](/component-hierarchy/ch.png)
 
 ## Mobile Screenshots 📱 📸
-![Home Page](pic)
-![Sign In Page](pic)
-![User Reviews Page](pic)
-![Create Review Page](pic)
-![Edit Review Page](pic)
+![Home Page](/screenshots/1M.png)
+![Reviews Page 1](/screenshots/2M.png)
+![Reviews Page 2](/screenshots/2MM.png)
+![Create Reviews Page](/screenshots/3M.png)
+![Delete/Edit Reviews Page](/screenshots/4M.png)
 
 ## Desktop Screenshots 🖥 📸
-![Home Page](pic)
-![Sign In Page](pic)
-![User Reviews Page](pic)
-![Create Review Page](pic)
-![Edit Review Page](pic)
+![Home Page](/screenshots/1D.png)
+![Reviews Page 1](/screenshots/2D.png)
+![Reviews Page 2](/screenshots/2DD.png)
+![Create Reviews Page](/screenshots/3D.png)
+![Delete/Edit Reviews Page](/screenshots/4D.png)
 
 ## Technology and Tools 🛠
 <p align="left">
