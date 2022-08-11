@@ -54,7 +54,7 @@ function ReadReviewPage() {
             <div className="body-container">
                 <div className="write-btn-container">
                     <Link to="/createreview">
-                        <button className="write-btn">Add a Study Spot Review</button>
+                        <button className="write-btn">+ Add a Study Spot Review</button>
                     </Link>
                 </div>
 

@@ -197,6 +197,10 @@
 }
 
 @media screen and (min-width: 800px) {
+    .review-card {
+        margin: 20px;;
+    }
+
     .review-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);

@@ -47,6 +47,8 @@ function UserReviewPage() {
         </div>
         <img className="x-close" src={xClose} alt="x" onClick={handleBack} />
       </div>
+      <div className="bk-chunk">
+      <div className="outside-container">
       <div className="user-review-container">
         <div className="ed-header">
           <h2 className="my-book-nooks">My Book Nooks</h2>
@@ -116,6 +118,8 @@ function UserReviewPage() {
             Logout
           </button>
         </div>
+      </div>
+      </div>
       </div>
     </div>
   );

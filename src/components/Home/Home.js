@@ -2,6 +2,7 @@ import './Home.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import logoLong from '../../assets/logo-long.svg'
 import logo from '../../assets/book-nook-icon.svg'
 
 function Home() {
@@ -83,7 +84,7 @@ function Home() {
         <div className="home-page">
             <div className="desktop-logo-div">
                 <h1 className="desktop-title">Book Nook</h1>
-                <img className="desktop-img" src={logo} alt="book nook logo"/>
+                <img className="desktop-img" src={logoLong} alt="book nook logo"/>
                 <p className="desktop-tagline">Discover Your Perfect Study Spot</p>
             </div>
 

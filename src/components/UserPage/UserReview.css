@@ -6,9 +6,23 @@
   overflow-y: hidden;
   overflow-x: hidden;
 }
+
+.bk-chunk {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.outside-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .scrolling-cards {
   overflow-y: scroll;
-  height: 60vh;
+  height: 50vh;
 }
 .ed-heading {
   display: flex;
@@ -19,28 +33,20 @@
 .book-nook-logo {
   width: 55px;
 }
-.back-button:hover {
-  background: #3a9c85;
-}
+
 .user-review-container {
   background: #fdf7e9;
   margin: 0 40px;
+  padding: 10px 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-radius: 20px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  min-width: 350px;
 }
-/* .ed-top {
-  display: flex;
-  align-items: center;
-  margin: 15px 10px;
-  background: #fdf7e9;
-  justify-content: space-between;
-  padding: 0px 10px;
-  border-radius: 10px;
-} */
+
 .ed-header {
   background-color: #845a3c;
   color: #fdf7e9;
@@ -84,6 +90,7 @@
 .user-review-card {
   margin-top: -15px;
   margin-bottom: -15px;
+  height: 140px;
 }
 .edit-delete-btn-container {
   display: flex;
@@ -103,6 +110,11 @@
   cursor: pointer;
   margin: 10px;
 }
+
+.delete:hover {
+  background:#dd554e;
+}
+
 .edit {
   width: 70px;
   height: 25px;
@@ -117,10 +129,15 @@
   cursor: pointer;
   margin: 10px;
 }
+.edit:hover {
+  background:rgb(103, 100, 100);
+}
+
 .log-out-div {
   display: flex;
   justify-content: center;
   margin: 10px;
+  margin-bottom: 0px;
 }
 .log-out-button {
   margin: 10px 30px;
@@ -136,8 +153,13 @@
   background: gray;
   width: 100px;
 }
+
+.log-out-button:hover {
+  background-color: rgb(103, 100, 100);
+}
+
 .x-close {
-  width: 35px;
+  width: 50px;
   cursor: pointer;
 }
 .my-book-nooks {
@@ -146,10 +168,20 @@
   font-weight: 800;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E15C45;
+  border-radius: 100vw;
+}
+
 @media screen and (min-width: 800px) {
   .scrolling-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 170px;
   }
   .ed-study-spot-info {
     margin-top: 30px;
@@ -162,6 +194,10 @@
   .log-out-button {
     width: 120px;
   }
+
+  .user-review-container {
+    min-width: 750px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -171,5 +207,9 @@
 
   .log-out-button {
     width: 140px;
+  }
+
+  .user-review-container {
+    min-width: 750px;
   }
 }
