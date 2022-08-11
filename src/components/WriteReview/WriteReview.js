@@ -1,7 +1,7 @@
 import './WriteReview.css'
 import Star from './Star'
 import { useState, useEffect } from 'react'
-import { useNavigate, Link } from 'react-router-dom'
+import { useNavigate, Link, useParams } from 'react-router-dom'
 import noise from '../../assets/noise-icon.svg'
 import outlet from '../../assets/outlet-icon.svg'
 import wifi from '../../assets/wifi-icon.svg'
@@ -17,17 +17,7 @@ function WriteReview() {
   const [outletsRating, setOutletsRating] = useState(0)
   const [wifiRating, setWifiRating] = useState(0)
   const [aestheticRating, setAestheticRating] = useState(0)
-  const [review, setReview] = useState({
-    study_spot: '',
-    title: '',
-    comment: '',
-    noise_level_rating: '',
-    outlets_rating: '',
-    wifi_rating: '',
-    aesthetic_rating: '',
-    owner: null
-  })
-  const [owner, setOwner] = useState({})
+  const { spot, reviewId } = useParams()
 
   function handleStudySpot(event) {
     setStudySpot(event.target.value)
@@ -48,45 +38,26 @@ function WriteReview() {
       .then(res => {
           const usersArr = res.data
           const loggedOnUser = usersArr.find(user => user.email === window.localStorage.getItem('Email'))
-          return loggedOnUser
-      })
-
-      .then(res => {
-        setOwner(res)
-        const reviewObj = {
-          study_spot: studySpot,
-          title: title,
-          comment: comment,
-          noise_level_rating: noiseRating,
-          outlets_rating: outletsRating,
-          aesthetic_rating: aestheticRating,
-          wifi_rating: wifiRating,
-          owner: owner
-        }
-        return reviewObj
-
-      })
-      .then(res => {
-        setReview(res)
-
-      })
-
-
-      .then(() => {
-        axios.post(`http://localhost:8000/api/reviews`, review)
-        .then(res => {
-          console.log(res)
-        })
-        .then(() => {
-          navigate('/reviews')
-        })
-        .catch(err => console.log(err))
-      })
-   
-
-
-  }
-
+          axios.post(`http://localhost:8000/api/reviews`, {
+            'title': title,
+            'comment': comment,
+            'study_spot': studySpot,
+            'wifi_rating': wifiRating,
+            'noise_level_rating': noiseRating,
+            'aesthetic_rating': aestheticRating,
+            'outlets_rating': outletsRating,
+            'owner': loggedOnUser
+          })
+            .then(res => {
+              console.log(res)
+            })
+            .then(() => {
+              navigate('/reviews')
+            })
+            .catch(err => console.log(err))
+          })
+      }
+  
 // useEffect(() => {
 //   console.log(review)
 // })
@@ -106,7 +77,11 @@ function WriteReview() {
           </Link>
       </div>
 
-      <h1 className="write-review-title">Write a Review</h1>
+      {reviewId ? (
+        <h1 className="write-review-title">Edit your {spot} Review</h1>
+      ) : (
+        <h1 className="write-review-title">Write a Review</h1>
+      )}
       <form className="rating-form" type="submit">
         <div type="category-chunk">
           <p className="category">Study Spot</p>

@@ -24,14 +24,6 @@ function UserReviewPage() {
 //         navigate("/profile");
 //       });
 //   }
-//62f2d58c901fa72b39899cad
-//Cafe du Monde
-
-//62f2d58c901fa72b39899cac
-//San Francisco Library
-
-//62f2d58c901fa72b39899caa
-//Starbucks
 
   function handleLogout() {
     window.localStorage.removeItem("Token");
@@ -40,7 +32,7 @@ function UserReviewPage() {
   }
 
   useEffect(() => {
-    axios.get(`http://localhost:8005/api/users`).then((res) => {
+    axios.get(`http://localhost:8000/api/users`).then((res) => {
       const usersArr = res.data;
       const loggedOnUser = usersArr.find(
         (user) => user.email === window.localStorage.getItem("Email")
@@ -48,7 +40,7 @@ function UserReviewPage() {
       const loggedOnUserId = loggedOnUser.id;
       console.log(loggedOnUserId)
       axios
-        .get(`http://localhost:8005/api/reviews/user/${loggedOnUserId}`)
+        .get(`http://localhost:8000/api/reviews/user/${loggedOnUserId}`)
         .then((res) => {
           console.log(res.data)
           setReviews(res.data);
@@ -73,7 +65,7 @@ function UserReviewPage() {
 
       <div className="user-review-container">
         <div className="header">
-          <h2> Edit or Delete Book Nooks</h2>
+          <h2>My Book Nooks</h2>
         </div>
         <div className="scrolling-cards">
         {reviews.map((review) => (
@@ -104,17 +96,17 @@ function UserReviewPage() {
                 </div>
                 </div>
         <div className="edit-delete-btn-container">
-          <Link to="/createreview">
+          <Link to={`/createreview/${review.study_spot}/${review._id}`}>
             <button className="edit"> Edit</button>
           </Link>
           <button onClick={function handleDelete(e) {
     axios
       .delete(
-        `http://localhost:8005/api/reviews/${review._id}`,
+        `http://localhost:8000/api/reviews/${review._id}`,
         window.localStorage.getItem("Token")
       )
       .then(() => {
-        navigate("/profile");
+        navigate("/reviews");
       });
   }} className="delete">
             Delete

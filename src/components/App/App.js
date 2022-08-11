@@ -19,6 +19,7 @@ function App() {
           <> */}
             <Route path="/reviews" element={<ReadReviewPage />}/>
             <Route path="/createreview" element={<WriteReview/>}/>
+            <Route path="/createreview/:spot/:reviewId" element={<WriteReview/>}/>
             <Route path="/profile" element={<UserReview />}/> 
             <Route path="/*" element={<Navigate to="/home"/>}/>
           {/* </>
