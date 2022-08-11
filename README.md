@@ -10,7 +10,7 @@ Project manager: Lance Chin
 - [Book Nook API](https://book-nooks-api.herokuapp.com/)
 
 ## Component Hierarchy :jigsaw:
-![Component Hierarch](/component-hierarchy/ch.png)
+![Component Hierarchy](/component-hierarchy/ch.png)
 
 ## Mobile Screenshots 📱 📸
 ![Home Page](/screenshots/1M.png)
