@@ -10,13 +10,28 @@
     justify-content: space-evenly;
 }
 
+.back-button {
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 600;
+    border: none;
+    box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
+    cursor: pointer;
+    background-color: #47AD96;
+    margin: 0 10px;
+    width: 80px;
+    padding: 5px;
+}
+
 .write-review-title {
     color: white;
     font-family: 'Alegreya Sans SC', sans-serif;
     font-weight: 800;
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
-    margin: 0px;
+    margin: 20px 30px;
 }
 
 .rating-form {
@@ -96,4 +111,72 @@
     justify-content: space-between;
     align-items: center;
     margin: 10px 30px;
+}
+
+.cancel-edit-btn {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.cancel-btn {
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 600;
+    border: none;
+    box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
+    cursor: pointer;
+    background-color: gray;
+    margin: 0 10px;
+    width: 100px;
+    padding: 5px;
+}
+
+.edit-btn {
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 600;
+    border: none;
+    box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
+    cursor: pointer;
+    background-color: #47AD96;
+    margin: 0 10px;
+    width: 100px;
+    padding: 5px;
+}
+
+.write-chunk {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 800px) {
+    .grid-chunk {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .write-review-title {
+        font-size: 40px;
+    }
+
+    .rating-form {
+        min-width: 700px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .write-review-title {
+        font-size: 50px;
+    }
+
+    .rating-form {
+        min-width: 700px;
+    }
 }

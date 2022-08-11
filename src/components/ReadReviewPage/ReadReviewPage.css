@@ -183,3 +183,37 @@
     font-weight: 300;
     margin: 10px;
 }
+
+.hello {
+    text-align: center;
+    color: white;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: 800;
+}
+
+.hello-text {
+    font-size: 40px;
+    margin: 10px;
+}
+
+@media screen and (min-width: 800px) {
+    .review-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .hello-text {
+        font-size: 50px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .review-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }    
+
+    .hello-text {
+        font-size: 60px;
+    }
+}

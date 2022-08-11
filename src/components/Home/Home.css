@@ -106,6 +106,75 @@
     justify-content: center;
 }
 
-.book-nook-logo {
+.book-nook-logo-1 {
     width: 150px;
 }
+
+.desktop-logo-div {
+    display: none;
+}
+
+@media screen and (min-width: 800px) {
+   .book-nook-title-div {
+        display: none;
+   }
+
+   .book-nook-logo-1 {
+        display: none;
+   }
+
+   .desktop-logo-div {
+        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .desktop-title {
+        color: white;
+        font-size: 60px;
+        font-family: 'Alegreya Sans SC', sans-serif;
+        font-weight: 800;
+        margin: 0;
+    }
+
+    .desktop-img {
+        width: 320px
+    }
+
+    .desktop-tagline {
+        color: white;
+        font-size: 20px;
+        font-family: 'Alegreya Sans SC', sans-serif;
+        font-weight: 700;
+        margin: 0;
+
+    }
+
+    .home-page {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form-container {
+        height: 50vh;
+        min-width: 350px;
+    }
+
+}
+  
+  /* @media screen and (min-width: 1200px) {
+    .book-nook-title-div {
+        display: none;
+   }
+
+    .book-nook-logo-1 {
+        display: none;
+    }
+
+    .desktop-logo-div {
+        display: block;
+    }
+  } */
