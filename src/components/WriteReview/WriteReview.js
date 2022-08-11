@@ -56,17 +56,39 @@ function WriteReview() {
             })
             .catch(err => console.log(err))
           })
-      }
+  }
   
-// useEffect(() => {
-//   console.log(review)
-// })
-
   const navigate = useNavigate() 
 
-    function handleBack() {
-        navigate(-1)
-    }
+  function handleBack() {
+    navigate(-1)
+  }
+
+  function handleCancel() {
+    navigate('/profile')
+  }
+
+  function handleUpdate(event) {
+    event.preventDefault()
+
+    axios.put(`http://localhost:8000/api/reviews/${reviewId}`, {
+      'title': title,
+      'comment': comment,
+      'study_spot': spot,
+      'wifi_rating': wifiRating,
+      'noise_level_rating': noiseRating,
+      'aesthetic_rating': aestheticRating,
+      'outlets_rating': outletsRating
+    })
+    .then(res => {
+      console.log(res)
+    })
+    .then(() => {
+      navigate('/reviews')
+    })
+    .catch(err => console.log(err))
+
+  }
 
   return (
     <div className="write-review-page">
@@ -77,24 +99,28 @@ function WriteReview() {
           </Link>
       </div>
 
-      {reviewId ? (
-        <h1 className="write-review-title">Edit your {spot} Review</h1>
+    <div class="write-chunk">
+      {spot ? (
+        <h1 className="write-review-title">Update your {spot} Review</h1>
       ) : (
         <h1 className="write-review-title">Write a Review</h1>
       )}
       <form className="rating-form" type="submit">
-        <div type="category-chunk">
-          <p className="category">Study Spot</p>
-          <div className="input-div">
-            <input
-              type="text"
-              onChange={handleStudySpot}
-              className="fields"
-              id='study-spot'
-              value={studySpot}
-            />
+
+        {!spot && 
+          <div type="category-chunk">
+            <p className="category">Study Spot</p>
+            <div className="input-div">
+              <input
+                type="text"
+                onChange={handleStudySpot}
+                className="fields"
+                id='study-spot'
+                value={studySpot}
+              />
+            </div>
           </div>
-        </div>
+          }
 
         <div type="category-chunk">
           <p className="category">Title</p>
@@ -122,40 +148,50 @@ function WriteReview() {
           </div>
         </div>
 
-        <div className="rating-chunk">
-          <p className="category">Noise Level</p>
-          <div className="star-div">
-            <img className="rating-icon" src={noise} alt="noise icon"/>
-            <Star rating={noiseRating} setRating={setNoiseRating}/>
+        <div className="grid-chunk">
+          <div className="rating-chunk">
+            <p className="category">Noise Level</p>
+            <div className="star-div">
+              <img className="rating-icon" src={noise} alt="noise icon"/>
+              <Star rating={noiseRating} setRating={setNoiseRating}/>
+            </div>
           </div>
+
+          <div className="rating-chunk">
+            <p className="category">Outlet Availability</p>
+            <div className="star-div">
+              <img className="rating-icon" src={outlet} alt="outlet icon"/>
+              <Star rating={outletsRating} setRating={setOutletsRating}/>
+            </div>
+          </div>
+
+          <div className="rating-chunk">
+            <p className="category">Wifi Speed</p>
+            <div className="star-div">
+              <img className="rating-icon" src={wifi} alt="wifi icon"/>
+              <Star rating={wifiRating} setRating={setWifiRating}/>
+            </div>
+          </div>
+
+          <div className="rating-chunk">
+            <p className="category">Ambiance</p>
+            <div className="star-div">
+              <img className="rating-icon" src={aesthetic} alt="aesthetic icon"/>
+              <Star rating={aestheticRating} setRating={setAestheticRating}/>
+            </div>
+          </div>   
         </div>
 
-        <div className="rating-chunk">
-          <p className="category">Outlet Availability</p>
-          <div className="star-div">
-            <img className="rating-icon" src={outlet} alt="outlet icon"/>
-            <Star rating={outletsRating} setRating={setOutletsRating}/>
+        {spot ? (
+          <div className="cancel-edit-btn">
+            <button onClick={handleCancel} className="cancel-btn">Cancel</button>
+            <button onClick={handleUpdate} className="edit-btn">Update</button>
           </div>
-        </div>
-
-        <div className="rating-chunk">
-          <p className="category">Wifi Speed</p>
-          <div className="star-div">
-            <img className="rating-icon" src={wifi} alt="wifi icon"/>
-            <Star rating={wifiRating} setRating={setWifiRating}/>
-          </div>
-        </div>
-
-        <div className="rating-chunk">
-          <p className="category">Ambiance</p>
-          <div className="star-div">
-            <img className="rating-icon" src={aesthetic} alt="aesthetic icon"/>
-            <Star rating={aestheticRating} setRating={setAestheticRating}/>
-          </div>
-        </div>   
-
-        <button className="post-btn" type="submit" onClick={handlePost}>Post</button>
+        ) : 
+        (<button className="post-btn" type="submit" onClick={handlePost}>Post</button>)
+        }
       </form>
+      </div>
 
 
     </div>

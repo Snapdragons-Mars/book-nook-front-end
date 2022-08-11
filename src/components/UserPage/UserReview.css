@@ -1,168 +1,175 @@
 .user-review-page {
-    background: #763e15;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    overflow-y: hidden;
-    overflow-x: hidden;
+  background: #763e15;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.scrolling-cards {
+  overflow-y: scroll;
+  height: 60vh;
+}
+.ed-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
+}
+.book-nook-logo {
+  width: 55px;
+}
+.back-button:hover {
+  background: #3a9c85;
+}
+.user-review-container {
+  background: #fdf7e9;
+  margin: 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+/* .ed-top {
+  display: flex;
+  align-items: center;
+  margin: 15px 10px;
+  background: #fdf7e9;
+  justify-content: space-between;
+  padding: 0px 10px;
+  border-radius: 10px;
+} */
+.ed-header {
+  background-color: #845a3c;
+  color: #fdf7e9;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.ed-study-spot-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 25px 10px 0px 10px;
+  background: #34a853;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.ed-study-spot-name {
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 800;
+  color: rgb(255, 255, 255);
+  margin: 5px;
+  font-size: 20px;
+}
+.ed-study-spot-star-rating {
+  display: flex;
+}
+.ed-star {
+  width: 27px;
+  margin: 0 5px;
+}
+.ed-rating {
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 800;
+  color: white;
+  font-size: 20px;
+  margin: 12px 0px;
+  font-family: "Alegreya Sans", sans-serif;
+}
+.user-review-card {
+  margin-top: -15px;
+  margin-bottom: -15px;
+}
+.edit-delete-btn-container {
+  display: flex;
+  justify-content: left;
+}
+.delete {
+  width: 70px;
+  height: 25px;
+  background: #ff6961;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 700;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: pointer;
+  margin: 10px;
+}
+.edit {
+  width: 70px;
+  height: 25px;
+  background: gray;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 700;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: pointer;
+  margin: 10px;
+}
+.log-out-div {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+.log-out-button {
+  margin: 10px 30px;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  font-size: 20px;
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 600;
+  border: none;
+  box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
+  cursor: pointer;
+  background: gray;
+  width: 100px;
+}
+.x-close {
+  width: 35px;
+  cursor: pointer;
+}
+.my-book-nooks {
+  margin: 10px;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 800;
+}
+
+@media screen and (min-width: 800px) {
+  .scrolling-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
-  .scrolling-cards{
-      overflow-y: scroll;
-      height: 60vh;
-  }
-  .heading {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 20px;
-  }
-  
-  .profile-btn {
-    width: 50px;
-    cursor: pointer;
-    float: right;
-  }
-  
-  .back-button {
-    width: 80px;
-    height: 30px;
-    background: #34a853;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    font-family: "Alegreya Sans", sans-serif;
-    font-weight: 700;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    cursor: pointer;
-  }
-  
-  .back-button:hover {
-    background: #3a9c85;
-  }
-  
-  .user-review-container {
-    background: #fdf7e9;
-    margin:0 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 20px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  .ed-study-spot-info {
+    margin-top: 30px;
   }
 
-  .write-header {
-    background-color: #845a3c;
-    color: #fdf7e9;
-    display: flex;
-    /* font-size: 30px; */
-    justify-content: space-between;
-    margin: 20px;
-    background: none;
-  }
-  .top {
-    display: flex;
-    align-items: center;
-    margin: 15px 10px;
-    background: #fdf7e9;
-    justify-content: space-between;
-    padding: 0px 10px;
-    border-radius: 10px; 
-  }
-  .study-spot-info {
-    background: #34a853;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    display: flex;
-    align-content: center;/* max-width: 150px; */
-  }
-  
-  /* .study-spot-icon-name {
-    display: flex;
-  } */
-  
-  .study-spot-icon {
-    width: 35px;
-  
-  }
-  
-  .study-spot-name {
-    font-family: "Alegreya Sans SC", sans-serif;
-    font-weight: 800;
-    color: black;
-    margin: 5px;
-    font-size: 20px;
-  }
-  
-  .study-spot-star-rating {
-    display: flex;
-  }
-  
-  .star {
-    width: 27px;
-    margin: 0 5px;
-  }
-  
-  .rating {
-    font-family: "Alegreya Sans SC", sans-serif;
-    font-weight: 800;
-    color: white;
-    font-size: 20px;
-    margin: 12px 0px;
+  .ed-header {
+    font-size: 30px;
   }
 
-  .user-review-card{
-      margin-top: -15px;
-      margin-bottom: -15px;
+  .log-out-button {
+    width: 120px;
   }
-  
-  .delete{
-      width: 70px;
-      height: 25px;
-      background: #ff6961;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 18px;
-      font-family: "Alegreya Sans", sans-serif;
-      font-weight: 700;
-      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-      cursor: pointer;
-      margin-top: 10px;
-  }
-  
-  .edit{
-      width: 70px;
-      height: 25px;
-      background: gray;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 18px;
-      font-family: "Alegreya Sans", sans-serif;
-      font-weight: 700;
-      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-      cursor: pointer;
-  }
-  .log-out-div  {
-      display: flex;
-      justify-content: center;
-  }
-  
-  .log-out-button{
-      margin: 10px 30px;
-      padding: 10px;
-      border-radius: 10px;
-      color: white;
-      font-size: 20px;
-      font-family: 'Alegreya Sans', sans-serif;
-      font-weight: 600;
-      border: none;
-      box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
-      cursor: pointer;
-      background: gray;
+}
+
+@media screen and (min-width: 1200px) {
+  .ed-header {
+    font-size: 40px;
   }
 
-  .x-close {
-    width: 35px;
+  .log-out-button {
+    width: 140px;
   }
+}

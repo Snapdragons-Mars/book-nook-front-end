@@ -14,13 +14,16 @@ import axios from 'axios'
 
 function ReadReviewPage() {
     const [reviews, setReviews] = useState([])
+    const [username, setUsername] = useState('')
 
     useEffect(() => {
         axios.get(`http://localhost:8000/api/users`)
         .then(res => {
             const usersArr = res.data
             const loggedOnUser = usersArr.find(user => user.email === window.localStorage.getItem('Email'))
+            console.log(loggedOnUser)
             const loggedOnUserId = loggedOnUser.id
+            setUsername(loggedOnUser.username)
             // console.log(loggedOnUserId)
             axios.get(`http://localhost:8000/api/reviews/user/${loggedOnUserId}`)
                 .then(res => {
@@ -42,6 +45,12 @@ function ReadReviewPage() {
                 </Link>
             </div>
 
+            {username && 
+                <div className="hello">
+                    <h1 className="hello-text">Hello {username[0].toUpperCase() + username.substring(1).toLowerCase()}! 👋</h1>
+                </div>
+            }
+
             <div className="body-container">
                 <div className="write-btn-container">
                     <Link to="/createreview">
@@ -56,55 +65,56 @@ function ReadReviewPage() {
                     </div>
                 )}
 
-                {reviews.map(review => (
-                    
-                    <div className="review-card" key={review._id}>
-                        <div className="top">
-                            <div className="study-spot-info">
-                                <div className="study-spot-icon-name">
-                                    <img className="study-spot-icon" src={cafe} alt="coffee-icon"/>
-                                    <h2 className="study-spot-name">{review.study_spot}</h2>
+                <div className="review-grid">
+                    {reviews.map(review => (
+                        
+                        <div className="review-card" key={review._id}>
+                            <div className="top">
+                                <div className="study-spot-info">
+                                    <div className="study-spot-icon-name">
+                                        <img className="study-spot-icon" src={cafe} alt="coffee-icon"/>
+                                        <h2 className="study-spot-name">{review.study_spot}</h2>
+                                    </div>
+                                    <div className="study-spot-star-rating">
+                                        <img className="star" src={star} alt="star-icon"/>
+                                        <p className="rating">{+((review.noise_level_rating + review.outlets_rating + review.wifi_rating + review.aesthetic_rating)/4).toFixed(1)}</p>
+                                    </div>
                                 </div>
-                                <div className="study-spot-star-rating">
-                                    <img className="star" src={star} alt="star-icon"/>
-                                    <p className="rating">{+((review.noise_level_rating + review.outlets_rating + review.wifi_rating + review.aesthetic_rating)/4).toFixed(1)}</p>
+                            </div>
+
+                            <div className="middle">
+                                <h3 className="review-title">{review.title}</h3>
+                                <p className="review-paragraph">
+                                    {review.comment}
+                                </p>
+                            </div>
+
+                            <hr className="divider"></hr>
+                                
+                            <div className="bottom">
+                                <div className="rating-div">
+                                    <img className="icon" src={noise} alt="Noise icon"/>
+                                    <p className="rating-number">{review.noise_level_rating}</p>
+                                </div>
+                                <div className="rating-div">
+                                    <img className="icon" src={outlet} alt="Outlet icon"/>
+                                    <p className="rating-number">{review.outlets_rating}</p>
+                                </div>
+                                <div className="rating-div">
+                                    <img className="icon" src={wifi} alt="Wifi icon"/>
+                                    <p className="rating-number">{review.wifi_rating}</p>
+                                </div>
+                                <div className="rating-div">
+                                    <img className="icon" src={aesthetic} alt="Aesthetic icon"/>
+                                    <p className="rating-number">{review.wifi_rating}</p>
                                 </div>
                             </div>
-                        </div>
-
-                        <div className="middle">
-                            <h3 className="review-title">{review.title}</h3>
-                            <p className="review-paragraph">
-                                {review.comment}
-                            </p>
-                        </div>
-
-                        <hr className="divider"></hr>
-                            
-                        <div className="bottom">
-                            <div className="rating-div">
-                                <img className="icon" src={noise} alt="Noise icon"/>
-                                <p className="rating-number">{review.noise_level_rating}</p>
-                            </div>
-                            <div className="rating-div">
-                                <img className="icon" src={outlet} alt="Outlet icon"/>
-                                <p className="rating-number">{review.outlets_rating}</p>
-                            </div>
-                            <div className="rating-div">
-                                <img className="icon" src={wifi} alt="Wifi icon"/>
-                                <p className="rating-number">{review.wifi_rating}</p>
-                            </div>
-                            <div className="rating-div">
-                                <img className="icon" src={aesthetic} alt="Aesthetic icon"/>
-                                <p className="rating-number">{review.wifi_rating}</p>
+                            <div className="date-div">
+                                <p className="date">{review.updatedAt.slice(5,10)}-{review.updatedAt.slice(0,4)}</p>
                             </div>
                         </div>
-                        <div className="date-div">
-                            <p className="date">{review.updatedAt.slice(5,10)}-{review.updatedAt.slice(0,4)}</p>
-                        </div>
-                    </div>
-                ))}
-
+                    ))}
+                </div>
             </div>
         </div>
     );

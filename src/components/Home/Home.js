@@ -81,9 +81,17 @@ function Home() {
 
     return (
         <div className="home-page">
+            <div className="desktop-logo-div">
+                <h1 className="desktop-title">Book Nook</h1>
+                <img className="desktop-img" src={logo} alt="book nook logo"/>
+                <p className="desktop-tagline">Discover Your Perfect Study Spot</p>
+            </div>
+
             <div className="book-nook-title-div">
                 <h1 className="book-nook-title">Book Nook</h1>
             </div>
+
+
             <div className="form-container">
                 <form className="sign-form" type="submit" onSubmit={handleSubmit}>
                     <div className="input-fields">
@@ -145,7 +153,7 @@ function Home() {
                 {signUp ? (<p className="switch">Already have an account? <span className="switch-link" onClick={handleSwitch}>Sign In</span></p>) : (<p className="switch">Need an account? <span className="switch-link" onClick={handleSwitch}>Sign Up</span></p>)}
             </div>
             <div className="book-nook-logo-div">
-                <img className="book-nook-logo" src={logo} alt="Book Nook Logo"/>
+                <img className="book-nook-logo-1" src={logo} alt="Book Nook Logo"/>
             </div> 
         </div>
     );
