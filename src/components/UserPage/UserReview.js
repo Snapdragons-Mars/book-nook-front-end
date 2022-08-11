@@ -32,7 +32,7 @@
 //   }
 
 //   useEffect(() => {
-//     axios.get(`http://localhost:8000/api/users`).then((res) => {
+//     axios.get(`https://book-nooks-api.herokuapp.com/api/users`).then((res) => {
 //       const usersArr = res.data;
 //       const loggedOnUser = usersArr.find(
 //         (user) => user.email === window.localStorage.getItem("Email")
@@ -40,7 +40,7 @@
 //       const loggedOnUserId = loggedOnUser.id;
 //       console.log(loggedOnUserId)
 //       axios
-//         .get(`http://localhost:8000/api/reviews/user/${loggedOnUserId}`)
+//         .get(`https://book-nooks-api.herokuapp.com/api/reviews/user/${loggedOnUserId}`)
 //         .then((res) => {
 //           console.log(res.data)
 //           setReviews(res.data);
@@ -102,7 +102,7 @@
 //           <button onClick={function handleDelete(e) {
 //     axios
 //       .delete(
-//         `http://localhost:8000/api/reviews/${review._id}`,
+//         `https://book-nooks-api.herokuapp.com/api/reviews/${review._id}`,
 //         window.localStorage.getItem("Token")
 //       )
 //       .then(() => {
@@ -161,7 +161,7 @@ function UserReviewPage() {
     navigate("/home");
   }
   useEffect(() => {
-    axios.get(`http://localhost:8000/api/users`).then((res) => {
+    axios.get(`https://book-nooks-api.herokuapp.com/api/users`).then((res) => {
       const usersArr = res.data;
       const loggedOnUser = usersArr.find(
         (user) => user.email === window.localStorage.getItem("Email")
@@ -169,7 +169,7 @@ function UserReviewPage() {
       const loggedOnUserId = loggedOnUser.id;
       console.log(loggedOnUserId);
       axios
-        .get(`http://localhost:8000/api/reviews/user/${loggedOnUserId}`)
+        .get(`https://book-nooks-api.herokuapp.com/api/reviews/user/${loggedOnUserId}`)
         .then((res) => {
           console.log(res.data);
           setReviews(res.data);
@@ -239,7 +239,7 @@ function UserReviewPage() {
                     onClick={function handleDelete(e) {
                       axios
                         .delete(
-                          `http://localhost:8000/api/reviews/${review._id}`,
+                          `https://book-nooks-api.herokuapp.com/api/reviews/${review._id}`,
                           window.localStorage.getItem("Token")
                         )
                         .then(() => {

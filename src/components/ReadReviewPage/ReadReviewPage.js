@@ -17,7 +17,7 @@ function ReadReviewPage() {
     const [username, setUsername] = useState('')
 
     useEffect(() => {
-        axios.get(`http://localhost:8000/api/users`)
+        axios.get(`https://book-nooks-api.herokuapp.com/api/users`)
         .then(res => {
             const usersArr = res.data
             const loggedOnUser = usersArr.find(user => user.email === window.localStorage.getItem('Email'))
@@ -25,7 +25,7 @@ function ReadReviewPage() {
             const loggedOnUserId = loggedOnUser.id
             setUsername(loggedOnUser.username)
             // console.log(loggedOnUserId)
-            axios.get(`http://localhost:8000/api/reviews/user/${loggedOnUserId}`)
+            axios.get(`https://book-nooks-api.herokuapp.com/api/reviews/user/${loggedOnUserId}`)
                 .then(res => {
                     // console.log(res.data)
                     setReviews(res.data)

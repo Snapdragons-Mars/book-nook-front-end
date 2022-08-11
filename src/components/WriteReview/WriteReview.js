@@ -34,11 +34,11 @@ function WriteReview() {
   function handlePost(event) {
     event.preventDefault()
 
-    axios.get(`http://localhost:8000/api/users`)
+    axios.get(`https://book-nooks-api.herokuapp.com/api/users`)
       .then(res => {
           const usersArr = res.data
           const loggedOnUser = usersArr.find(user => user.email === window.localStorage.getItem('Email'))
-          axios.post(`http://localhost:8000/api/reviews`, {
+          axios.post(`https://book-nooks-api.herokuapp.com/api/reviews`, {
             'title': title,
             'comment': comment,
             'study_spot': studySpot,
@@ -71,7 +71,7 @@ function WriteReview() {
   function handleUpdate(event) {
     event.preventDefault()
 
-    axios.put(`http://localhost:8000/api/reviews/${reviewId}`, {
+    axios.put(`https://book-nooks-api.herokuapp.com/api/reviews/${reviewId}`, {
       'title': title,
       'comment': comment,
       'study_spot': spot,
