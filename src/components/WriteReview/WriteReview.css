@@ -185,6 +185,10 @@
     align-items: center;
 }
 
+.book-nook-name {
+    text-decoration: none;
+}
+
 @media screen and (min-width: 800px) {
     .grid-chunk {
         display: grid;
