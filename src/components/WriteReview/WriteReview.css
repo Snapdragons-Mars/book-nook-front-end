@@ -1,4 +1,4 @@
-.review-page {
+.write-review-page {
     background: #763E15;
     height: 100vh;
     margin: 0;
@@ -7,12 +7,22 @@
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
-.form-container {
+.write-review-title {
+    color: white;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    text-align: center;
+    margin: 0px;
+}
+
+.rating-form {
     background: #FDF7E9;
-    margin: 0 40px;
+    margin: 10px 40px;
+    padding: 10px 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,39 +30,17 @@
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
-.input-fields {
-    display: flex;
-    flex-direction: column;
-    margin: 0 20px;
+.category {
+    color: black;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    margin: 5px 30px;
 }
 
-#rating-button {
-    width: 20px;
-    display: block;
-}
-
-.welcome-message {
-    text-align: center;
-    margin: 5px;
-    color: #47AD96;
-    font-weight: 700;
-}
-
-.field {
-    margin: 5px 0px;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.field::placeholder {
-    font-family: 'Alegreya Sans', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-}
-
-.sign-button {
+.post-btn {
     background: #47AD96;
-    margin: 10px 20px;
+    margin: 10px 30px;
     padding: 10px;
     border-radius: 10px;
     color: white;
@@ -64,30 +52,48 @@
     cursor: pointer;
 }
 
-.sign-button:hover {
-    background: #3a9c85;
-}
-
-.error-message {
-    margin: 10px 20px;
-}
-
-.switch {
-    text-align: center;
-}
-
-.switch-link {
-    color: #47AD96;
-    text-decoration: underline;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-.book-nook-logo-div {
+.input-div {
+    border: solid 1px black;
+    border-radius: 10px;
+    background-color: white;
     display: flex;
     justify-content: center;
+    margin: 3px 30px;
+    padding: 5px;
+    height: 25px;
 }
 
-.book-nook-logo {
-    width: 100px;
+.fields {   
+    margin: 0px;
+    width: 100%;
+    border: none;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.star-div {
+    border: solid 1px black;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    margin: 3px 30px;
+    padding: 5px;
+}
+
+.rating-icon {
+    width: 25px;
+    margin: 0 5px;
+}
+
+.cat-comment {
+    height: 50px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 30px;
 }

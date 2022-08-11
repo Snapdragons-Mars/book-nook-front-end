@@ -13,7 +13,7 @@ function UserReviewPage() {
         navigate(-1)
     }
     function handleDelete(e){
-        axios.delete(`http://localhost:8005/api/reviews/62f2d962eb20c39f89aac277/`, window.localStorage.getItem("Token"))
+        axios.delete(`http://localhost:8000/api/reviews/62f2d962eb20c39f89aac277/`, window.localStorage.getItem("Token"))
             .then(() => {
                 navigate('/profile')
             })   
