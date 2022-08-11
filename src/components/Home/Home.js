@@ -30,7 +30,7 @@ function Home() {
     function handleSubmit(event) {
         event.preventDefault()
         if (signUp) {
-            axios.post(`http://localhost:8000/api/users/signup`, userSignUp)
+            axios.post(`https://book-nooks-api.herokuapp.com/api/users/signup`, userSignUp)
                 .then(res => {
                     setSignUp(!signUp)
                     setWelcomeUser(true)
@@ -46,7 +46,7 @@ function Home() {
                 })
         }
         else {
-            axios.post(`http://localhost:8000/api/users/signin`, userSignIn)
+            axios.post(`https://book-nooks-api.herokuapp.com/api/users/signin`, userSignIn)
                 .then(res => {
                     // console.log(res)
                     // save token to local storage
