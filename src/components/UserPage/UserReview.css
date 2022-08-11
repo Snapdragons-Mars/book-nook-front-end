@@ -90,7 +90,7 @@
 .user-review-card {
   margin-top: -15px;
   margin-bottom: -15px;
-  height: 140px;
+  height: 150px;
 }
 .edit-delete-btn-container {
   display: flex;
@@ -198,6 +198,10 @@
   .user-review-container {
     min-width: 750px;
   }
+
+  .user-review-card {
+    height: 190px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -211,5 +215,9 @@
 
   .user-review-container {
     min-width: 750px;
+  }
+
+  .user-review-card {
+    height: 190px;
   }
 }
