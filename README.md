@@ -1,12 +1,12 @@
-# BookNook - Front End 📚
-We're happy to present BookNook – a website that allows students, job seekers, and employees to track and rate their favorite study spots. Users create or sign in to an account to record a study spot's noise levels, access to outlets, wifi strength, and overall ambiance. Should they desire, users can access, edit, and also delete their reviews. Happy studying!
+# Book Nook - Front End 📚
+We're happy to present Book Nook – a website that allows students, job seekers, and employees to track and rate their favorite study spots. Users create or sign in to an account to record a study spot's noise levels, access to outlets, wifi strength, and overall ambiance. Should they desire, users can access, edit, and also delete their reviews. Happy studying!
 
 Project authors: Madison Aberer, Davis Brown, Lance Chin, and Felipe Ventura
 
 Project manager: Lance Chin
 
 ## Check It Out 💡 
-- [BookNook](https://book-nooks.netlify.app/) 
+- [Book Nook](https://book-nooks.netlify.app/) 
 
 ## Component Hierarchy :jigsaw:
 (pic)
@@ -62,4 +62,4 @@ This project was an exciting opportunity to build a full-stack application for t
 Thinking about where we could take this project, our goals would be to implement a location-based 3rd party API to allow users to search study spots by location and study spot category.
 
 ## Reflection 🙌
-Developing BookNook was an incredible learning experience, both working as a team and creating our first full-stack project! We worked as a team to overcome many new challenges, and it was a pleasure to collaborate on this project. We wrote some awesome React, JSX, and CSS through pair programming and individual contributions. Some front-end features we're particularly proud of include user sign up and sign in, intuitive navigation routes, cohesive design scheme, and interactive UI. Cheers!
+Developing Book Nook was an incredible learning experience, both working as a team and creating our first full-stack project! We worked as a team to overcome many new challenges, and it was a pleasure to collaborate on this project. We wrote some awesome React, JSX, and CSS through pair programming and individual contributions. Some front-end features we're particularly proud of include user sign up and sign in, intuitive navigation routes, cohesive design scheme, and interactive UI. Cheers!
