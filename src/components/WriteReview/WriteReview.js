@@ -101,7 +101,7 @@ function WriteReview() {
 
     <div class="write-chunk">
       {spot ? (
-        <h1 className="write-review-title">Update your {spot} Review</h1>
+        <h1 className="write-review-title">Update Your {spot} Review</h1>
       ) : (
         <h1 className="write-review-title">Write a Review</h1>
       )}
@@ -138,7 +138,8 @@ function WriteReview() {
         <div type="category-chunk">
           <p className="category">Comment</p>
           <div className="input-div cat-comment">
-            <input
+            <textarea
+              rows="5"
               type="text"
               onChange={handleComment}
               className="fields"
@@ -188,7 +189,9 @@ function WriteReview() {
             <button onClick={handleUpdate} className="edit-btn">Update</button>
           </div>
         ) : 
-        (<button className="post-btn" type="submit" onClick={handlePost}>Post</button>)
+        (<div className="post-btn-div">
+            <button className="post-btn" type="submit" onClick={handlePost}>Post</button>
+        </div>)
         }
       </form>
       </div>

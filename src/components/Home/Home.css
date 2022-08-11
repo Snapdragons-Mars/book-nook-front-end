@@ -8,6 +8,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
 .book-nook-title-div {
@@ -31,6 +32,7 @@
     justify-content: center;
     border-radius: 20px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    min-width: 350px;
 }
 
 .sign-form {
@@ -128,6 +130,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 50px;
     }
 
     .desktop-title {
@@ -135,7 +138,7 @@
         font-size: 60px;
         font-family: 'Alegreya Sans SC', sans-serif;
         font-weight: 800;
-        margin: 0;
+        margin: 10px;
     }
 
     .desktop-img {
@@ -147,8 +150,7 @@
         font-size: 20px;
         font-family: 'Alegreya Sans SC', sans-serif;
         font-weight: 700;
-        margin: 0;
-
+        margin: 10px;
     }
 
     .home-page {
@@ -161,20 +163,6 @@
     .form-container {
         height: 50vh;
         min-width: 350px;
+        margin: 50px;
     }
-
 }
-  
-  /* @media screen and (min-width: 1200px) {
-    .book-nook-title-div {
-        display: none;
-   }
-
-    .book-nook-logo-1 {
-        display: none;
-    }
-
-    .desktop-logo-div {
-        display: block;
-    }
-  } */
