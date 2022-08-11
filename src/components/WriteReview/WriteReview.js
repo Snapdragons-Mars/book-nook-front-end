@@ -25,7 +25,7 @@ function WriteReview() {
     outlets_rating: '',
     wifi_rating: '',
     aesthetic_rating: '',
-    owner: {}
+    owner: null
   })
   const [owner, setOwner] = useState({})
 
@@ -41,36 +41,50 @@ function WriteReview() {
     setComment(event.target.value)
   }
 
-  useEffect(() => {
-    axios.get(`http://localhost:8000/api/users`)
-    .then(res => {
-        const usersArr = res.data
-        const loggedOnUser = usersArr.find(user => user.email === window.localStorage.getItem('Email'))
-        setOwner(loggedOnUser)
-  }, [])})
-
   function handlePost(event) {
     event.preventDefault()
-    const reviewObj = {
-      study_spot: studySpot,
-      title: title,
-      comment: comment,
-      noise_level_rating: noiseRating,
-      outlets_rating: outletsRating,
-      aesthetic_rating: aestheticRating,
-      owner: owner
-    }
-    setReview(reviewObj)
-    console.log(review)
 
-    axios.post(`http://localhost:8000/api/reviews`, review)
-    .then(res => {
-      console.log(res)
-    })
-    .then(() => {
-      navigate('/reviews')
-    })
-    .catch(err => console.log(err))
+    axios.get(`http://localhost:8000/api/users`)
+      .then(res => {
+          const usersArr = res.data
+          const loggedOnUser = usersArr.find(user => user.email === window.localStorage.getItem('Email'))
+          return loggedOnUser
+      })
+
+      .then(res => {
+        setOwner(res)
+        const reviewObj = {
+          study_spot: studySpot,
+          title: title,
+          comment: comment,
+          noise_level_rating: noiseRating,
+          outlets_rating: outletsRating,
+          aesthetic_rating: aestheticRating,
+          wifi_rating: wifiRating,
+          owner: owner
+        }
+        return reviewObj
+
+      })
+      .then(res => {
+        setReview(res)
+
+      })
+
+
+      .then(() => {
+        axios.post(`http://localhost:8000/api/reviews`, review)
+        .then(res => {
+          console.log(res)
+        })
+        .then(() => {
+          navigate('/reviews')
+        })
+        .catch(err => console.log(err))
+      })
+   
+
+
   }
 
 // useEffect(() => {
@@ -85,7 +99,7 @@ function WriteReview() {
 
   return (
     <div className="write-review-page">
-    <div className="header">
+    <div className="write-header">
           <button onClick={handleBack} className="back-button">Back</button>
           <Link to="/profile">
               <img className="profile-btn" src={profile} alt="profile"/>
