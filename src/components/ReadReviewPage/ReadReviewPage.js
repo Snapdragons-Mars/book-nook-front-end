@@ -21,7 +21,7 @@ function ReadReviewPage() {
         .then(res => {
             const usersArr = res.data
             const loggedOnUser = usersArr.find(user => user.email === window.localStorage.getItem('Email'))
-            console.log(loggedOnUser)
+            // console.log(loggedOnUser)
             const loggedOnUserId = loggedOnUser.id
             setUsername(loggedOnUser.username)
             // console.log(loggedOnUserId)

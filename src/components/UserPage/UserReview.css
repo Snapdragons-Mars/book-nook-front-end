@@ -24,14 +24,20 @@
   overflow-y: scroll;
   height: 50vh;
 }
+
 .ed-heading {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 20px;
 }
+
 .book-nook-logo {
   width: 55px;
+}
+
+.book-nook-link {
+  text-decoration: none;
 }
 
 .user-review-container {
@@ -55,6 +61,7 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
 .ed-study-spot-info {
   display: flex;
   align-items: center;
@@ -65,16 +72,23 @@
   border-radius: 10px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+
 .ed-study-spot-name {
   font-family: "Alegreya Sans SC", sans-serif;
   font-weight: 800;
   color: rgb(255, 255, 255);
   margin: 5px;
-  font-size: 20px;
+  font-size: 23px;
 }
+
+.ed-study-spot-icon-name {
+  display: flex;
+}
+
 .ed-study-spot-star-rating {
   display: flex;
 }
+
 .ed-star {
   width: 27px;
   margin: 0 5px;
@@ -87,15 +101,12 @@
   margin: 12px 0px;
   font-family: "Alegreya Sans", sans-serif;
 }
-.user-review-card {
-  margin-top: -15px;
-  margin-bottom: -15px;
-  height: 150px;
-}
+
 .edit-delete-btn-container {
   display: flex;
   justify-content: left;
 }
+
 .delete {
   width: 70px;
   height: 25px;
@@ -109,6 +120,7 @@
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   cursor: pointer;
   margin: 10px;
+  text-align: center;
 }
 
 .delete:hover {
@@ -181,7 +193,6 @@
   .scrolling-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 170px;
   }
   .ed-study-spot-info {
     margin-top: 30px;
@@ -198,15 +209,11 @@
   .user-review-container {
     min-width: 750px;
   }
-
-  .user-review-card {
-    height: 200px;
-  }
 }
 
 @media screen and (min-width: 1200px) {
   .ed-header {
-    font-size: 40px;
+    font-size: 35px;
   }
 
   .log-out-button {
@@ -215,9 +222,5 @@
 
   .user-review-container {
     min-width: 750px;
-  }
-
-  .user-review-card {
-    height: 200px;
   }
 }

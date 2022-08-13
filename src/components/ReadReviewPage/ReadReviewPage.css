@@ -35,13 +35,13 @@
 
 .write-btn-container {
     margin: 25px;
+
     display: flex;
     justify-content: center;
 }
 
 .write-btn {
     width: 260px;
-    height: 35px;
     background: #E15C45;
     color: white;
     border: none;
@@ -51,6 +51,7 @@
     font-weight: 800;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     cursor: pointer;
+    padding: 5px;
 }
 
 .write-btn:hover {
