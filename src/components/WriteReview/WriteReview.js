@@ -99,7 +99,7 @@ function WriteReview() {
           </Link>
       </div>
 
-    <div class="write-chunk">
+    <div className="write-chunk">
       {spot ? (
         <h1 className="write-review-title">Update Your {spot} Review</h1>
       ) : (
