@@ -6,41 +6,53 @@
   overflow-y: hidden;
   overflow-x: hidden;
 }
+
+.bk-chunk {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.outside-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .scrolling-cards {
   overflow-y: scroll;
-  height: 60vh;
+  height: 50vh;
 }
+
 .ed-heading {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 20px;
 }
+
 .book-nook-logo {
   width: 55px;
 }
-.back-button:hover {
-  background: #3a9c85;
+
+.book-nook-link {
+  text-decoration: none;
 }
+
 .user-review-container {
   background: #fdf7e9;
   margin: 0 40px;
+  padding: 10px 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-radius: 20px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  min-width: 350px;
 }
-/* .ed-top {
-  display: flex;
-  align-items: center;
-  margin: 15px 10px;
-  background: #fdf7e9;
-  justify-content: space-between;
-  padding: 0px 10px;
-  border-radius: 10px;
-} */
+
 .ed-header {
   background-color: #845a3c;
   color: #fdf7e9;
@@ -49,6 +61,7 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
 .ed-study-spot-info {
   display: flex;
   align-items: center;
@@ -59,16 +72,23 @@
   border-radius: 10px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+
 .ed-study-spot-name {
   font-family: "Alegreya Sans SC", sans-serif;
   font-weight: 800;
   color: rgb(255, 255, 255);
   margin: 5px;
-  font-size: 20px;
+  font-size: 23px;
 }
+
+.ed-study-spot-icon-name {
+  display: flex;
+}
+
 .ed-study-spot-star-rating {
   display: flex;
 }
+
 .ed-star {
   width: 27px;
   margin: 0 5px;
@@ -81,14 +101,12 @@
   margin: 12px 0px;
   font-family: "Alegreya Sans", sans-serif;
 }
-.user-review-card {
-  margin-top: -15px;
-  margin-bottom: -15px;
-}
+
 .edit-delete-btn-container {
   display: flex;
   justify-content: left;
 }
+
 .delete {
   width: 70px;
   height: 25px;
@@ -102,7 +120,13 @@
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   cursor: pointer;
   margin: 10px;
+  text-align: center;
 }
+
+.delete:hover {
+  background:#dd554e;
+}
+
 .edit {
   width: 70px;
   height: 25px;
@@ -117,10 +141,15 @@
   cursor: pointer;
   margin: 10px;
 }
+.edit:hover {
+  background:rgb(103, 100, 100);
+}
+
 .log-out-div {
   display: flex;
   justify-content: center;
   margin: 10px;
+  margin-bottom: 0px;
 }
 .log-out-button {
   margin: 10px 30px;
@@ -136,14 +165,28 @@
   background: gray;
   width: 100px;
 }
+
+.log-out-button:hover {
+  background-color: rgb(103, 100, 100);
+}
+
 .x-close {
-  width: 35px;
+  width: 50px;
   cursor: pointer;
 }
 .my-book-nooks {
   margin: 10px;
   font-family: "Alegreya Sans SC", sans-serif;
   font-weight: 800;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E15C45;
+  border-radius: 100vw;
 }
 
 @media screen and (min-width: 800px) {
@@ -162,14 +205,22 @@
   .log-out-button {
     width: 120px;
   }
+
+  .user-review-container {
+    min-width: 750px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .ed-header {
-    font-size: 40px;
+    font-size: 35px;
   }
 
   .log-out-button {
     width: 140px;
+  }
+
+  .user-review-container {
+    min-width: 750px;
   }
 }

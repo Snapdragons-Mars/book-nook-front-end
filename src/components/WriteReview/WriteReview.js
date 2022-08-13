@@ -34,11 +34,11 @@ function WriteReview() {
   function handlePost(event) {
     event.preventDefault()
 
-    axios.get(`http://localhost:8000/api/users`)
+    axios.get(`https://book-nooks-api.herokuapp.com/api/users`)
       .then(res => {
           const usersArr = res.data
           const loggedOnUser = usersArr.find(user => user.email === window.localStorage.getItem('Email'))
-          axios.post(`http://localhost:8000/api/reviews`, {
+          axios.post(`https://book-nooks-api.herokuapp.com/api/reviews`, {
             'title': title,
             'comment': comment,
             'study_spot': studySpot,
@@ -71,7 +71,7 @@ function WriteReview() {
   function handleUpdate(event) {
     event.preventDefault()
 
-    axios.put(`http://localhost:8000/api/reviews/${reviewId}`, {
+    axios.put(`https://book-nooks-api.herokuapp.com/api/reviews/${reviewId}`, {
       'title': title,
       'comment': comment,
       'study_spot': spot,
@@ -99,9 +99,9 @@ function WriteReview() {
           </Link>
       </div>
 
-    <div class="write-chunk">
+    <div className="write-chunk">
       {spot ? (
-        <h1 className="write-review-title">Update your {spot} Review</h1>
+        <h1 className="write-review-title">Update Your {spot} Review</h1>
       ) : (
         <h1 className="write-review-title">Write a Review</h1>
       )}
@@ -138,7 +138,8 @@ function WriteReview() {
         <div type="category-chunk">
           <p className="category">Comment</p>
           <div className="input-div cat-comment">
-            <input
+            <textarea
+              rows="5"
               type="text"
               onChange={handleComment}
               className="fields"
@@ -188,7 +189,9 @@ function WriteReview() {
             <button onClick={handleUpdate} className="edit-btn">Update</button>
           </div>
         ) : 
-        (<button className="post-btn" type="submit" onClick={handlePost}>Post</button>)
+        (<div className="post-btn-div">
+            <button className="post-btn" type="submit" onClick={handlePost}>Post</button>
+        </div>)
         }
       </form>
       </div>

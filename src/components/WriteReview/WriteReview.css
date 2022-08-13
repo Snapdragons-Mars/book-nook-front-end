@@ -7,7 +7,10 @@
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+}
+
+.write-chunk {
+    flex-grow: 1;
 }
 
 .back-button {
@@ -25,13 +28,17 @@
     padding: 5px;
 }
 
+.back-button:hover {
+    background: #3a9c85;
+  }
+
 .write-review-title {
     color: white;
     font-family: 'Alegreya Sans SC', sans-serif;
     font-weight: 800;
     font-size: 30px;
     text-align: center;
-    margin: 20px 30px;
+    margin: 0px 30px;
 }
 
 .rating-form {
@@ -43,6 +50,7 @@
     justify-content: center;
     border-radius: 20px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    min-width: 350px;
 }
 
 .category {
@@ -53,9 +61,14 @@
     margin: 5px 30px;
 }
 
+.post-btn-div {
+    display: flex;
+    justify-content: center;
+}
+
 .post-btn {
     background: #47AD96;
-    margin: 10px 30px;
+    margin: 20px 30px 0px 30px;
     padding: 10px;
     border-radius: 10px;
     color: white;
@@ -65,7 +78,12 @@
     border: none;
     box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
     cursor: pointer;
+    width: 100px;
 }
+
+.post-btn:hover {
+    background: #3a9c85;
+  }
 
 .input-div {
     border: solid 1px black;
@@ -85,6 +103,8 @@
     font-family: 'Alegreya Sans', sans-serif;
     font-weight: 500;
     font-size: 20px;
+    text-align: start;
+    outline: none;
 }
 
 .star-div {
@@ -134,6 +154,10 @@
     padding: 5px;
 }
 
+.cancel-btn:hover {
+    background-color: rgb(103, 100, 100);
+}
+
 .edit-btn {
     border-radius: 10px;
     color: white;
@@ -143,17 +167,26 @@
     border: none;
     box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
     cursor: pointer;
-    background-color: #47AD96;
+    background-color: #E15C45;
     margin: 0 10px;
     width: 100px;
     padding: 5px;
 }
+
+.edit-btn:hover {
+    background: #ca4d37;
+}
+
 
 .write-chunk {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.book-nook-name {
+    text-decoration: none;
 }
 
 @media screen and (min-width: 800px) {
@@ -167,7 +200,7 @@
     }
 
     .rating-form {
-        min-width: 700px;
+        min-width: 750px;
     }
 }
 
@@ -177,6 +210,6 @@
     }
 
     .rating-form {
-        min-width: 700px;
+        min-width: 750px;
     }
 }
