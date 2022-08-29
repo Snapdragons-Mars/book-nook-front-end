@@ -17,18 +17,11 @@ Project manager: Lance Chin
 ![Page 2](/screenshots/desktop/screenshot-d2.png)
 
 ## Technology and Tools 🛠
-<p align="left">
-    <a target="_blank" href="https://reactjs.org/"> <img src="https://brandslogos.com/wp-content/uploads/images/large/react-logo-1.png" alt="React Icon" width="40" height="40"/>
-    </a> 
-    <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript Icon" width="40" height="40"/>
-    </a>
-    <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="CSS3 Icon" width="40" height="40"/>
-    </a> 
-    <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML" > <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="HTML5 Icon" width="40" height="40"/>
-    </a>
-    <a target="_blank" href="https://mui.com/"> <img src="https://v4.material-ui.com/static/logo.png" alt="Material UI Icon" width="40" height="40"/>
-    </a> 
-</p>
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![Material UI](https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white)
 
 ## Installation Instructions and Contribution Guidelines 📲
 To view this project locally:
