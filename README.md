@@ -10,7 +10,7 @@ Project manager: Lance Chin
 - [Book Nook API](https://book-nooks-api.herokuapp.com/)
 
 ## Mobile Screenshots 📱 📸
-![Page 1](/screenshots/mobile/screenshot-m1.png.png)
+![Page 1](/screenshots/mobile/screenshot-m1.png)
 
 ## Desktop Screenshots 🖥 📸
 ![Page 1](/screenshots/desktop/screenshot-d1.png)
