@@ -9,22 +9,12 @@ Project manager: Lance Chin
 - [Book Nook](https://book-nooks.netlify.app/)
 - [Book Nook API](https://book-nooks-api.herokuapp.com/)
 
-## Component Hierarchy :jigsaw:
-![Component Hierarchy](/component-hierarchy/ch.png)
-
 ## Mobile Screenshots 📱 📸
-![Home Page](/screenshots/1M.png)
-![Reviews Page 1](/screenshots/2M.png)
-![Reviews Page 2](/screenshots/2MM.png)
-![Create Reviews Page](/screenshots/3M.png)
-![Delete/Edit Reviews Page](/screenshots/4M.png)
+![Page 1](/screenshots/mobile/screenshot-m1.png.png)
 
 ## Desktop Screenshots 🖥 📸
-![Home Page](/screenshots/1D.png)
-![Reviews Page 1](/screenshots/2D.png)
-![Reviews Page 2](/screenshots/2DD.png)
-![Create Reviews Page](/screenshots/3D.png)
-![Delete/Edit Reviews Page](/screenshots/4D.png)
+![Page 1](/screenshots/desktop/screenshot-d1.png)
+![Page 2](/screenshots/desktop/screenshot-d2.png)
 
 ## Technology and Tools 🛠
 <p align="left">
@@ -50,14 +40,23 @@ To view this project locally:
 
 ## User Stories 🗣
 As a student, job seeker, or employee...
--I want to find record study spots near my current location
--Choose study spots based on past positive experience
--Rate study spots based on amenities (outlets, wifi)
--Rate study spots based on ambiance (noise level, aesthetic)
--Reference, edit, and delete previous reviews on their experience at that study spot
+- I want to find record study spots near my current location
+- Choose study spots based on past positive experience
+- Rate study spots based on amenities (outlets, wifi)
+- Rate study spots based on ambiance (noise level, aesthetic)
+- Reference, edit, and delete previous reviews on their experience at that study spot
+
+## Mobile Wireframes 📱 🕸 
+![Page 1](/planning/wireframes/mobile/wireframe-m1.png)
+## Desktop Wireframes 🖥 🕸 
+![Page 1](/planning/wireframes/desktop/wireframe-d1.png)
+![Page 2](/planning/wireframes/desktop/wireframe-d2.png)
+
+## Component Hierarchy :jigsaw:
+![Component Hierarchy](/planning/component-hierarchy/ch.png)
 
 ## Challenges 💪
-This project was an exciting opportunity to build a full-stack application for the first time, as well as work in a team. A few roadblockers we encountered were GitHub workflow errors, including problems with rebase and LiveShare. We also hoped to incorporate a 3rd party API that would allow users to both search for study spots and view other user reviews. Overall, we have produced a project we are proud of and learned so much from this experience.
+This project was an exciting opportunity to build a full-stack application for the first time, as well as work in a team. A few roadblocks we encountered were GitHub workflow errors, including problems with rebase and LiveShare. We also hoped to incorporate a 3rd party API that would allow users to both search for study spots and view other user reviews. Overall, we have produced a project we are proud of and learned so much from this experience.
 
 ## What's Next 🏁
 Thinking about where we could take this project, our goals would be to implement a location-based 3rd party API to allow users to search study spots by location and study spot category.
