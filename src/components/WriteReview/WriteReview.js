@@ -34,11 +34,11 @@ function WriteReview() {
   function handlePost(event) {
     event.preventDefault()
 
-    axios.get(`https://book-nooks-api.herokuapp.com/api/users`)
+    axios.get(`https://book-nook-back-end-production.up.railway.app/api/users`)
       .then(res => {
           const usersArr = res.data
           const loggedOnUser = usersArr.find(user => user.email === window.localStorage.getItem('Email'))
-          axios.post(`https://book-nooks-api.herokuapp.com/api/reviews`, {
+          axios.post(`https://book-nook-back-end-production.up.railway.app/api/reviews`, {
             'title': title,
             'comment': comment,
             'study_spot': studySpot,
@@ -71,7 +71,7 @@ function WriteReview() {
   function handleUpdate(event) {
     event.preventDefault()
 
-    axios.put(`https://book-nooks-api.herokuapp.com/api/reviews/${reviewId}`, {
+    axios.put(`https://book-nook-back-end-production.up.railway.app/api/reviews/${reviewId}`, {
       'title': title,
       'comment': comment,
       'study_spot': spot,

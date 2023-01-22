@@ -19,7 +19,7 @@ function UserReviewPage() {
     navigate("/home");
   }
   useEffect(() => {
-    axios.get(`https://book-nooks-api.herokuapp.com/api/users`).then((res) => {
+    axios.get(`https://book-nook-back-end-production.up.railway.app/api/users`).then((res) => {
       const usersArr = res.data;
       const loggedOnUser = usersArr.find(
         (user) => user.email === window.localStorage.getItem("Email")
@@ -27,7 +27,7 @@ function UserReviewPage() {
       const loggedOnUserId = loggedOnUser.id;
       setUsername(loggedOnUser.username)
       axios
-        .get(`https://book-nooks-api.herokuapp.com/api/reviews/user/${loggedOnUserId}`)
+        .get(`https://book-nook-back-end-production.up.railway.app/api/reviews/user/${loggedOnUserId}`)
         .then((res) => {
           setReviews(res.data);
         });
@@ -98,7 +98,7 @@ function UserReviewPage() {
                         onClick={function handleDelete(e) {
                           axios
                             .delete(
-                              `https://book-nooks-api.herokuapp.com/api/reviews/${review._id}`,
+                              `https://book-nook-back-end-production.up.railway.app/api/reviews/${review._id}`,
                               window.localStorage.getItem("Token")
                             )
                             .then(() => {
